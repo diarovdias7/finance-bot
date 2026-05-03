@@ -6,7 +6,7 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 from datetime import datetime
 
-BOT_TOKEN = "8622965455:AAGh1QtBU9trda6q2zj2-O42OSOVNG1B1hk"
+BOT_TOKEN = ("BOT_TOKEN")
 bot = telebot.TeleBot(BOT_TOKEN)
 
 DATA_FILE = "data.json"
@@ -231,6 +231,6 @@ def year_graph(chat_id, uid):
 
     bot.send_photo(chat_id, open(file,"rb"))
 
-# ---------------- RUN ----------------
-print("FINANCE BOT READY")
-bot.infinity_polling()
+if __name__ == "__main__":
+    print("BOT STARTED")
+    bot.infinity_polling()
